@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
+/* font-family: "Overpass", sans-serif; */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /****** PRIMARY **********/
+  --orange: hsl(25, 97%, 53%);
+
+  /******* NEUTRAL ********/
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --medium-grey: hsl(216, 12%, 54%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+body {
+  font-size: 15px;
+  font-family: "Overpass", sans-serif;
+  background-color: var(--very-dark-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--light-grey);
+  background-color: hsl(211, 20%, 23%);
+  border-radius: 100%;
+  padding: 1rem;
+  padding-bottom: 0.9rem;
+  margin: 0 auto;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+a:hover {
+  color: white;
+  background-color: var(--orange);
+}
+
+.active {
+  color: white;
+  background-color: var(--light-grey);
+}
+
+/************* RATING  CARD *************/
+.container {
+  padding: 30px 0;
+  margin: 0 30px;
+}
+
+.card {
+  background-color: var(--dark-blue);
+  width: 100%;
+  max-width: 400px;
+  overflow: hidden;
+  padding: 2rem 1.5rem;
+  border-radius: 30px;
+}
+
+.img img {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 12%;
+  background-color: hsl(211, 20%, 23%);
+  padding: 0.9rem;
+  border-radius: 50px;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+h1 {
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+
+p {
+  color: var(--light-grey);
+  line-height: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.rating {
+  margin: 0 0.2rem;
+}
+
+ul {
+  font-weight: 700;
+  display: flex;
+  gap: 1.3rem;
+  margin-bottom: 1.8rem;
+  width: 100%;
+}
+
+/***************** BUTTON ************/
+button {
+  font-weight: 700;
+  color: #fff;
+  width: 95%;
+  padding: 0.9rem 0.8rem;
+  margin: 0 auto;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  border: none;
+  border-radius: 30px;
+  background-color: var(--orange);
+  transition: scale 0.2s ease;
+  cursor: pointer;
+}
+
+button:hover {
+  scale: 1.05;
+  background-color: #fff;
+  color: var(--orange);
+}
+
+button:active {
+  scale: 0.95;
+}
+
+/*********** THANK-YOU CARD *********************/
+
+#thanks-card {
+  display: none;
+}
+.thank-you {
+  align-items: center;
+  text-align: center;
+}
+
+.thanks_text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--orange);
+  background-color: hsl(211, 20%, 23%);
+  padding: 0.2rem;
+  padding-bottom: 0rem;
+  width: 200px;
+  border-radius: 30px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+h2 {
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.display {
+  display: block;
+}
+
+.display1 {
+  display: none;
+}
+
+@media only screen and (max-width: 400px) {
+  .card {
+    width: 360px;
+  }
+
+  a {
+    padding: 0.8rem;
+    padding-bottom: 0.7rem;
+    width: 45px;
+  }
+
+  button {
+    width: 100%;
+  }
+}
